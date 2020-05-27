@@ -1,24 +1,20 @@
 .page {
   margin: 20px;
 }
-.container {
-  border: 5px solid green;
-  font-size: 36px;
-}
-.item {
-  border: 3px solid rgb(211, 20, 179);
-}
 
 /* flex */
 
 .container {
+  border: 5px solid green;
   display: flex;
   flex-wrap: wrap;
+  font-size: 36px;
 }
 
 .item {
-  box-sizing: border-box;
-  width: 200px;
-  height: 100px;
   background-image: url(/images/mushroom2.jfif);
+  border: 3px solid rgb(211, 20, 179);
+  box-sizing: border-box;
+  height: 100px;
+  width: 200px;
 }
