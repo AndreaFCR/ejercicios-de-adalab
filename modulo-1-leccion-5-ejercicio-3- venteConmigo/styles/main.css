@@ -1,0 +1,10 @@
+.header {
+  background-color: blueviolet;
+  position: fixed;
+  width: 100%;
+}
+
+.text {
+  position: absolute;
+  top: 120px;
+}
