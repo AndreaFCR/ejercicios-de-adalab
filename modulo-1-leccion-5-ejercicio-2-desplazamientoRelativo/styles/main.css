@@ -1,4 +1,4 @@
-.parent .child1 {
+.child1 {
   background-color: aquamarine;
   height: 300px;
   left: 100px;
@@ -9,7 +9,7 @@
   width: 300px;
 }
 
-.parent .child2 {
+.child2 {
   background-color: fuchsia;
   height: 300px;
   left: -150px;
@@ -20,7 +20,7 @@
   width: 300px;
 }
 
-.parent .child3 {
+.child3 {
   background-color: orange;
   height: 300px;
   left: 180px;

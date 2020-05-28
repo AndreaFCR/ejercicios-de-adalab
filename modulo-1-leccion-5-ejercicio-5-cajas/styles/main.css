@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.child1 {
+  background-color: yellow;
+  border: 2px solid red;
+  height: 500px;
+  padding: 40px;
+  position: absolute;
+  width: 500px;
+}
+
+.child2 {
+  background-color: green;
+  height: 300px;
+  padding: 75px;
+  position: absolute;
+  width: 300px;
+}
+
+.child3 {
+  background-color: blue;
+  border: 20px solid black;
+  border-style: dotted;
+  height: 150px;
+  position: absolute;
+  width: 150px;
+}
