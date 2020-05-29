@@ -1,0 +1,133 @@
+.header,
+.main,
+.footer {
+  border: 2px solid red;
+}
+
+* {
+  box-sizing: border-box;
+  color: inherit;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: Circular;
+  src: url("https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-light.woff2")
+      format("woff2"),
+    url("https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-light.woff")
+      format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Circular;
+  src: url("https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-black.woff2")
+      format("woff2"),
+    url("https://sp-bootstrap.global.ssl.fastly.net/8.12.1/fonts/circular-black.woff")
+      format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+:root {
+  /* COLORS */
+  --primary-color: black;
+  --secondary-color: #4bb84a;
+  --light-color: white;
+  --tertiary-color: #0691ff;
+  /* FONTS */
+  --primary-font: Circular, Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-family: var(--primary-font);
+  font-size: 16px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  border: 1px solid green;
+  padding: 15px;
+}
+
+/* HEADER */
+
+.header {
+  background-color: var(--primary-color);
+}
+
+.header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  display: inline-block;
+  width: 115px;
+}
+
+.header-logo img {
+  width: 100%;
+}
+
+.header-mobile-button {
+  display: block;
+  background-image: url(../images/menu-icon.png);
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+}
+
+.header-menu {
+  color: var(--light-color);
+  list-style-type: none;
+  padding: 0px;
+  display: none;
+}
+
+.header-menu li {
+  display: inline-block;
+}
+
+.header-menu li a {
+  font-weight: bold;
+  padding: 15px;
+}
+
+.header-menu li:nth-child(3):after {
+  content: "|";
+}
+
+/* HERO */
+
+.hero {
+  background-color: var(--tertiary-color);
+  color: var(--light-color);
+}
+
+.hero .wrapper {
+  height: 50vh;
+}
+
+@media all and (min-width: 780px) {
+  .header-menu {
+    display: block;
+  }
+
+  .header-mobile-button {
+    display: none;
+  }
+
+  .hero .wrapper {
+    background: url(../images/premium_dancer.png) no-repeat;
+    background-position: right top;
+  }
+}
+
+@media all and (min-width: 1200px) {
+}
