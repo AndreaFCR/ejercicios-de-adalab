@@ -1,0 +1,10 @@
+.img {
+  background: url(../images/fondo-luz.png) center no-repeat;
+  border: 1px solid red;
+  height: 469px;
+  width: 626px;
+}
+
+img {
+  border: 1px solid red;
+}

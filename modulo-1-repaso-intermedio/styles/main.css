@@ -1,0 +1,87 @@
+/* cargar en font en html por delante del main y reset */
+:root {
+  --primary-color: #cc212a;
+  --light-color: white;
+  --dark-color: black;
+  --primary-font: "Monserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  color: inherit;
+  font-family: var(--primary-font);
+  margin: 0px;
+  font-weight: 300;
+}
+
+/* importante lo siguiente para los contenedores */
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px;
+}
+
+/* MAIN */
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title {
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+.main-title span {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* FOOTER */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid var(--primary-color);
+  text-align: center;
+}
+
+.footer-logo {
+  background-color: var(--primary-color);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  color: var(--light-color);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer .wrapper {
+  padding-top: 40px;
+}
+
+@media all and (min-width: 768px) {
+  .footer-logo {
+    position: static;
+    transform: none;
+  }
+
+  .footer .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+}
