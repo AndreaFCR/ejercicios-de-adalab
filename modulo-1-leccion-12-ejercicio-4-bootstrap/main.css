@@ -1,0 +1,19 @@
+.header {
+  background-color: pink;
+  height: 20vh;
+}
+
+.menu {
+  background-color: rebeccapurple;
+  height: 60vh;
+}
+
+.content {
+  background-color: crimson;
+  height: 60vh;
+}
+
+.footer {
+  background-color: lightblue;
+  height: 20vh;
+}

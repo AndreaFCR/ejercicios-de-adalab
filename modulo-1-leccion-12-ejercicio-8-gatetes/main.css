@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  box-sizing: content-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat (5, 1fr);
+}
+.header {
+  background-color: aquamarine;
+  padding: 10px;
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 20vh 40vh 40vh;
+  }
+
+  .header {
+    grid-column: span 2;
+  }
+
+  .item {
+    grid-column: span 1;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .container {
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    grid-template-rows: 60vh 40vh;
+  }
+
+  .header {
+    grid-column: span 4;
+  }
+}
