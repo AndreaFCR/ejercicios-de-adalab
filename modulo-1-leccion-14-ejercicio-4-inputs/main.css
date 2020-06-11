@@ -1,0 +1,19 @@
+.input {
+  display: block;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid grey;
+  font-weight: 600;
+  color: grey;
+}
+
+.input::placeholder {
+  font-weight: 400;
+  color: grey;
+}
+
+.input:focus {
+  outline: none;
+  border-bottom: 1px solid lightskyblue;
+  color: lightskyblue;
+}

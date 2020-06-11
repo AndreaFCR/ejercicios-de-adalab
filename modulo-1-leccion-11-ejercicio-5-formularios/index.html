@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./main.scss" rel="stylesheet" />
+    <title>Ejercicio</title>
+  </head>
+  <body class="body">
+    <form action="" method="POST">
+      <div class="name">
+        <label>
+          Nombre
+          <input type="text" name="firstName" placeholder="Nombre" required />
+          <input type="text" name="lastName" placeholder="Apellido" required />
+        </label>
+      </div>
+      <div>
+        <label>
+          Nombre de usuario
+          <input
+            type="email"
+            name="userName"
+            placeholder="@gmail.com"
+            required
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          Contraseña
+          <input type="password" name="password" required />
+        </label>
+      </div>
+      <div>
+        <label>
+          Confirma tu contraseña
+          <input type="password" name="password" required />
+        </label>
+      </div>
+      <div>
+        <label>
+          Fecha de nacimiento
+          <input type="number" name="dayOfBirth" placeholder="Día" required />
+          <select required>
+            <option value="">Mes</option>
+            <option value="enero">Enero</option>
+            <option value="febrero">Febrero</option>
+            <option value="marzo">Marzo</option>
+          </select>
+          <input type="number" name="yearOfBirth" placeholder="Año" required />
+        </label>
+      </div>
+      <div>
+        <label>
+          Sexo
+          <select required>
+            <option value="">Selecciona tu género</option>
+            <option value="mujer">Mujer</option>
+            <option value="hombre">Hombre</option>
+          </select>
+        </label>
+      </div>
+      <div>
+        <label>
+          Teléfono móvil
+          <input type="tel" name="phoneNumber" pattern="^[0-9]{9}$" required />
+        </label>
+      </div>
+      <div>
+        <label>
+          Tu dirección de correo electrónico actual
+          <input type="email" name="actualEmailAddress" required />
+        </label>
+      </div>
+      <div>
+        <label>
+          Ubicación
+          <select required>
+            <option value="spain">España</option>
+            <option value="portugal">Portugal</option>
+          </select>
+        </label>
+      </div>
+      <div>
+        <input type="submit" value="Siguiente paso" />
+      </div>
+    </form>
+  </body>
+</html>
