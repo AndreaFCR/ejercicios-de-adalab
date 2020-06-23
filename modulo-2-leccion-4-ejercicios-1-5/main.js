@@ -18,13 +18,22 @@ console.log(`El resultado de la función es ${test2}`);
 
 // ejercicio 3
 
-let withoutIva = 5;
+let withoutIva = 1;
 
 function iva(withoutIva) {
-  return parseFloat(a * 0.21);
+  return parseFloat(withoutIva * 0.21);
 }
 
 const withIva = iva(withoutIva);
 const total = parseFloat(withoutIva + withIva);
 console.log(`Precio sin IVA: ${withoutIva}, IVA: ${withIva} y Total: ${total}`);
-// falta algo...
+
+// ejercicio 4
+
+function evenOrOdd(a) {
+  return a % 2 === 0;
+}
+const even = evenOrOdd(2);
+console.log(even);
+
+// ejercicio 5
