@@ -1,3 +1,6 @@
+"use strict";
+// debugger;
+
 // ejercicio 1
 
 function times(a, b) {
@@ -18,12 +21,11 @@ console.log(`El resultado de la función es ${test2}`);
 
 // ejercicio 3
 
-let withoutIva = 1;
-
 function iva(withoutIva) {
   return parseFloat(withoutIva * 0.21);
 }
 
+const withoutIva = 1;
 const withIva = iva(withoutIva);
 const total = parseFloat(withoutIva + withIva);
 console.log(`Precio sin IVA: ${withoutIva}, IVA: ${withIva} y Total: ${total}`);
@@ -36,4 +38,11 @@ function evenOrOdd(a) {
 const even = evenOrOdd(2);
 console.log(even);
 
-// ejercicio 5
+// ejercicio 5 y 6
+
+function getEl(selector) {
+  return document.querySelector(selector);
+}
+
+const btnEl = getEl(".js-btn1");
+btnEl.innerHTML = "Hola mundo";
