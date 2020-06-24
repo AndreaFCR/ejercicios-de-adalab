@@ -41,8 +41,15 @@ console.log(even);
 // ejercicio 5 y 6
 
 function getEl(selector) {
-  return document.querySelector(selector);
+  const element = document.querySelector(selector);
+  if (element === null) {
+    console.log(
+      `No existe ningún elemento con clase, id o tag llamado ${selector}`
+    );
+  } else {
+    return element;
+  }
 }
 
-const btnEl = getEl(".js-btn1");
-btnEl.innerHTML = "Hola mundo";
+const btnEl = getEl(".js-btn");
+btnEl.innerHTML = "Hola mundo"; // para comprobar que funciona
