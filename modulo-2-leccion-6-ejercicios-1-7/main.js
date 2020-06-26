@@ -42,4 +42,11 @@ adalaber1.showBio = function () {
   );
 };
 
+adalaber2.showBio = function () {
+  console.log(
+    `Mi nombre es ${this.name}, tengo ${this.age} años y soy ${this.job}`
+  );
+};
+
 adalaber1.showBio();
+adalaber2.showBio();
