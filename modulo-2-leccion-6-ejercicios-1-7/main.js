@@ -50,3 +50,22 @@ adalaber2.showBio = function () {
 
 adalaber1.showBio();
 adalaber2.showBio();
+
+// ejercicio 4
+
+const button = document.querySelector(".js-button");
+const fx = (event) => console.log(event);
+
+button.addEventListener("click", fx);
+// type: "click"
+
+// ejercicio 5
+
+const input = document.querySelector(".js-input");
+console.log(input);
+console.dir(input);
+// value: ""
+// nodeName: "INPUT"
+// required: false
+
+//  ejercicio 6
