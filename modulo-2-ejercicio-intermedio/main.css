@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffcc00;
+}
+
+.container-color-even {
+  background-color: #ffcc00;
+}
+
+.container-color-odd {
+  background-color: #ff9900;
+}
