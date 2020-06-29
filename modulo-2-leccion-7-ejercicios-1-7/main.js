@@ -54,4 +54,4 @@ function handlerPressButton() {
   }
 }
 
-button.addEventListener("click", handlerPressButton());
+button.addEventListener("submit", handlerPressButton());
