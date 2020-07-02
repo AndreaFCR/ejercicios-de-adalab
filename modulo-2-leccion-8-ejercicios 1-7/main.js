@@ -140,3 +140,17 @@ check1.addEventListener("click", handlerClick);
 check2.addEventListener("click", handlerClick);
 check3.addEventListener("click", handlerClick);
 check4.addEventListener("click", handlerClick);
+
+// ejercicio 5
+
+let triangle = "▲";
+const tree = [];
+let height = 5;
+function lineTree() {
+  for (let a = 0; a < height; a++) {
+    tree.push(triangle);
+    console.log(tree);
+  }
+}
+
+lineTree();
