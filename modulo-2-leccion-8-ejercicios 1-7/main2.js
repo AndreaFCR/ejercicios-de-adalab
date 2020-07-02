@@ -1,11 +1,7 @@
 // ejercicio 4
 
-const list = document.querySelector(".list-js");
-// const items = list.querySelectorAll(".item-js"); //seleccionamos todos los li en un array
-// const tasksCheck = document.querySelectorAll(".tasks-js");
-const taskNumber = document.querySelector(".taskNumber-js");
-// let counter = 4;
-// taskNumber.innerHTML = counter;
+const list = document.querySelector(".list-js"); //selecciono el elemento ul
+// const taskNumber = document.querySelector(".taskNumber-js"); //para el contador
 
 const tasks = [
   { name: "Recoger setas en el campo", completed: true },
@@ -17,27 +13,21 @@ const tasks = [
   },
 ];
 
-// recorre el array de tasks y pinta cada task en cada uno de los li.
-
+//funcion para incluir nuevos li al ul con su respectivas clases e inputs
 function showTasks() {
   list.innerHTML = "";
-  let i = -1;
-  for (let task of tasks) {
-    i += 1;
-    list.innerHTML += `<li class="item item-js">${tasks[i].name}`;
-    list.innerHTML += `<input type="checkbox" class="tasks-js" /></li>`;
+  for (let i = 0; i < tasks.length; i++) {
+    list.innerHTML += `<li class="item-js">${tasks[i].name}`;
+    list.innerHTML += `<input type="checkbox" class="tasks-js" /></li><br />`;
   }
 }
 
-showTasks();
+showTasks(); //lanzo la funcion para "pintar" las tareas cuando carga la página
 
-// recorre la lista de tasks y si tiene el atributo completed como true le añade la clase cross que tacha el texto.
-
+// función para que el texto aparezca tachado
 function crossItems() {
   const items = list.querySelectorAll(".item-js");
-  let i = -1;
-  for (let task of tasks) {
-    i += 1;
+  for (let i = 0; i < tasks.length; i++) {
     if (tasks[i].completed === true) {
       items[i].classList.add("cross");
     } else {
@@ -46,14 +36,12 @@ function crossItems() {
   }
 }
 
-crossItems();
-setCheckBoxes();
+crossItems(); //lanzo la funcion cuando se carga la página
 
+// función para que los checkboxes estén checkeados si la tarea está completada
 function setCheckBoxes() {
   const tasksElements = document.querySelectorAll(".tasks-js");
-  let i = -1;
-  for (let task of tasksElements) {
-    i += 1;
+  for (let i = 0; i < tasksElements.length; i++) {
     if (tasks[i].completed === true) {
       tasksElements[i].checked = true;
     } else {
@@ -61,12 +49,21 @@ function setCheckBoxes() {
     }
   }
 }
+setCheckBoxes(); //lanzo la función cuando se carga la página
 
+// función manejadora del evento, lanza las funciones para cambiar el atributo completed del array y para tachar/deshacer tachado de las tareas completadas.
+function handlerClick() {
+  isCompleted();
+  crossItems();
+  // showTasks(); /no son necesarios, mayor dificultad
+  // setCheckBoxes();
+  // listenItems();
+}
+
+// función para cambiar el atributo completed del array en el caso de que el check esté pulsado o no
 function isCompleted() {
   const tasksElements = document.querySelectorAll(".tasks-js");
-  let i = -1;
-  for (let task of tasksElements) {
-    i += 1;
+  for (let i = 0; i < tasksElements.length; i++) {
     if (tasksElements[i].checked === true) {
       tasks[i].completed = true;
     } else {
@@ -75,34 +72,14 @@ function isCompleted() {
   }
 }
 
-function handlerClick() {
-  isCompleted();
-  showTasks();
-  crossItems();
-  setCheckBoxes();
-  listenItems();
-}
-
+// función escuchadora del evento para cada uno de los input
 function listenItems() {
   const tasksElements = document.querySelectorAll(".tasks-js");
-  let i = 0;
-  for (let task of tasks) {
-    tasksElements[i].addEventListener("click", handlerClick);
-    i += 1;
+  for (let task of tasksElements) {
+    task.addEventListener("click", handlerClick);
   }
 }
 
-listenItems();
+listenItems(); //lazamos la función
 
-// function counterNumber() {
-//   if (tasksCheck.checked === true) {
-//     counter -= 1;
-//     console.log(counter);
-//   }
-//   if (tasksCheck.checked === false) {
-//     counter += 1;
-//     console.log(counter);
-//   }
-// }
-
-// counterNumber();
+// falta la parte d
