@@ -8,7 +8,20 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
-h1 {
+.title {
   color: turquoise;
   text-align: center;
+}
+
+.img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.item {
+  max-width: 650px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
