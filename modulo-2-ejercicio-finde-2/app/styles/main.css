@@ -1,9 +1,14 @@
 * {
   box-sizing: border-box;
   padding: 0;
-  margin: 0
+  margin: 0;
 }
 
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
+}
+
+h1 {
+  color: turquoise;
+  text-align: center;
 }
