@@ -32,13 +32,19 @@ fetch(ENDPOINT)
       htmlCode += `<div class="container1">`;
       htmlCode += `<img class="img" src="${photo}" alt="Foto ${names}" />`;
       htmlCode += `<h4 class="name-js">${names}</h4></div>`;
-      htmlCode += `<div class="container-2"><p>${description}</p></div></li>`;
+      htmlCode += `<div class="container2"><p>${description}</p></div></li>`;
       ulElement.innerHTML = htmlCode;
     }
 
     // seleccionamos cada uno de los li para cuando se pinche en ellos se ponga con el fondo azul
     let items = document.querySelectorAll(".item-js");
-    console.log(items);
+    for (let item of items) {
+      function handlerClick() {
+        item.classList.toggle("item-color");
+      }
+
+      item.addEventListener("click", handlerClick);
+    }
 
     // cualquier valor obtenido del fetch tiene que estar aquí dentro!!!! IMPORTANTE
   });

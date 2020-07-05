@@ -4,24 +4,38 @@
   margin: 0;
 }
 
-body {
-  font-family: "Noto Sans", sans-serif;
-}
-
 .title {
+  font-family: "Mouse Memoirs", sans-serif;
+  font-size: 60px;
   color: turquoise;
   text-align: center;
 }
 
-.img {
-  max-width: 100px;
-  max-height: 100px;
+.item {
+  max-width: 700px;
+  margin: 15px auto 15px;
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
 
-.item {
-  max-width: 650px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.item-color {
+  background-color: skyblue;
+}
+
+.img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.container1 {
+  font-family: "Mouse Memoirs", sans-serif;
+  font-size: 20px;
+  max-width: 150px;
+}
+
+.container2 {
+  font-family: "Noto Sans", sans-serif;
+  text-align: left;
+  margin-left: 15px;
 }
