@@ -16,6 +16,7 @@ for (let number of numbers) {
 // ejercicio 2
 
 const container = document.querySelector(".container-js");
+const selection = document.querySelector(".js-select");
 
 const NYImages = [
   "./images/foto_NY_1.jpg",
@@ -23,30 +24,42 @@ const NYImages = [
   "./images/foto_NY_3.jpg",
 ];
 
-const images = [
-  {
-    image0: "./images/foto_madrid_1.jpg",
-    image1: "./images/foto_madrid_2.jpg",
-    image2: "./images/foto_madrid_3.jpg",
-  },
-  {
-    image0: "./images/foto_paris_1.jpg",
-    image1: "./images/foto_paris_2.jpg",
-    image2: "./images/foto_paris_3.jpg",
-  },
+const madridImages = [
+  "./images/foto_madrid_1.jpg",
+  "./images/foto_madrid_2.jpg",
+  "./images/foto_madrid_3.jpg",
 ];
 
-// for (let i = 0; i < images.length; i++) {
-//   const newImage = document.createElement("img");
-//   newImage.setAttribute("src", `${images[0].image0}`);
-//   container.appendChild(newImage);
-// }
+const parisImages = [
+  "./images/foto_paris_1.jpg",
+  "./images/foto_paris_2.jpg",
+  "./images/foto_paris_3.jpg",
+];
 
-for (let NYimage of NYImages) {
-  const newImage = document.createElement("img");
-  newImage.setAttribute("src", `${NYimage}`);
-  container.appendChild(newImage);
+function handleChange(ev) {
+  if (ev.currentTarget.value === "1") {
+    for (let madridImage of madridImages) {
+      const newImage = document.createElement("img");
+      newImage.setAttribute("src", `${madridImage}`);
+      container.appendChild(newImage);
+    }
+  } else if (ev.currentTarget.value === "2") {
+    for (let parisImage of parisImages) {
+      const newImage = document.createElement("img");
+      newImage.setAttribute("src", `${parisImage}`);
+      container.appendChild(newImage);
+    }
+  } else if (ev.currentTarget.value === "3") {
+    for (let NYImage of NYImages) {
+      const newImage = document.createElement("img");
+      newImage.setAttribute("src", `${NYImage}`);
+      container.appendChild(newImage);
+    }
+  }
 }
-// meter condicionales para cada uno de los valores del select. usar event current target y un listener de change.
+
+selection.addEventListener("change", handleChange);
+
+// falta hacer un remove de los anteriores con container.remove(); pero... donde???
 
 // ejercicio 3, repo concha
