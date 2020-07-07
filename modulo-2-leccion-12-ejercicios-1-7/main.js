@@ -48,3 +48,5 @@ for (let NYimage of NYImages) {
   container.appendChild(newImage);
 }
 // meter condicionales para cada uno de los valores del select. usar event current target y un listener de change.
+
+// ejercicio 3, repo concha
