@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": 165,
+      "name": "Node JS",
+      "price": 16,
+      "imageUrl": "//beta.adalab.es/ejercicios-extra/api/eshop/assets/images/node-js.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 367,
+      "name": "JavaScript",
+      "price": 15,
+      "imageUrl": "//beta.adalab.es/ejercicios-extra/api/eshop/assets/images/javascript.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 801,
+      "name": "React JS",
+      "price": 13,
+      "imageUrl": "//beta.adalab.es/ejercicios-extra/api/eshop/assets/images/react.jpg",
+      "quantity": 1
+    }
+  ]
+}
