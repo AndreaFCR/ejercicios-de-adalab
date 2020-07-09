@@ -1,5 +1,5 @@
 "use strict";
-// vamos a cargar los datos desde un api y guardarlos en un array llamado products. lo metemos en una función aunque sea al cargar la página.
+// vamos a cargar los datos desde un api y guardarlos en un array llamado products. lo metemos en una función aunque sea al cargar la página. creamos un array cart que recoge los elementos de la cesta
 let products = [];
 let cart = [];
 
@@ -7,12 +7,12 @@ const getDataFromApi = () => {
   fetch("./api/data.json")
     .then((response) => response.json())
     .then((data) => {
-      products = data.items;
+      products = data.items; //metemos los datos en el array products
       paintProducts(); //se pinta cuando ya se reciban los datos
     });
 };
 
-// NOTA: para pensar cómo pintar los datos con JS es mejor pintar primero en html con datos faltos y luego ver cómo hacerlo con JS
+// NOTA: para pensar cómo pintar los datos con JS es mejor pintar primero en html con datos falsos y luego ver cómo hacerlo con JS
 
 // función para pintar los productos
 
@@ -27,15 +27,15 @@ const paintProducts = () => {
     codeHTML += `<button class="card__btn js-productInc" i = "${i}" id = "${products[i].id}">Añadir a la cesta</button>`;
     codeHTML += `</article>`;
   }
-  const cardsElement = document.querySelector(".js-cards"); //seleccionamos el sitio donde lo pintamos
+  const cardsElement = document.querySelector(".js-cards"); //seleccionamos el sitio donde pintamos los elementos
   cardsElement.innerHTML = codeHTML; //pintamos
-  listenProductsClick(); //escuchamos los botones pulsados después de pintar
+  listenProductsClick(); //escuchamos los botones pulsados después de pintar!!
 };
 
 // función para pintar la cesta
 
 const paintCart = () => {
-  let codeHTML = "";
+  let codeHTML = ""; //volvemos a crear una constante dentro de la funcion para ir añadiendo lo que se pinta. En este caso lo pintaremos en modo tabla
   for (let index = 0; index < cart.length; index += 1) {
     codeHTML += `<tr>`;
     codeHTML += `<td>${cart[index].name}</td>`;
@@ -50,10 +50,10 @@ const paintCart = () => {
     }€</td>`;
     codeHTML += `</tr>`;
   }
-  codeHTML += getCartTotalHtmlCode();
-  const cardsElement = document.querySelector(".js-cart");
-  cardsElement.innerHTML = codeHTML;
-  listenCartClicks();
+  codeHTML += getCartTotalHtmlCode(); //pinta solamente la línea final con el total
+  const cardsElement = document.querySelector(".js-cart"); //seleccionamos la cesta
+  cardsElement.innerHTML = codeHTML; //pintamos
+  listenCartClicks(); //y volvemos a escuchar!!
 };
 
 // función para pintar el total en el html
