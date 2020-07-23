@@ -7,14 +7,13 @@ class OnionHater extends React.Component {
   }
 
   handleAlert(ev) {
-    if (ev.target.value === "cebolla") {
+    if (ev.target.value.includes("cebolla")) {
       alert("ODIO LA CEBOLLA");
-      // tiene que buscar la palabra cebolla en toda la cadena con includes
     }
   }
 
   render() {
-    return <textarea onKeyUp={this.handleAlert}></textarea>;
+    return <textarea onChange={this.handleAlert}></textarea>;
   }
 }
 
