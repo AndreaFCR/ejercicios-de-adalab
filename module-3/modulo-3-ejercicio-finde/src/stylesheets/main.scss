@@ -1,0 +1,20 @@
+.main {
+  &__form {
+    border: 1px solid green;
+  }
+
+  &__container {
+    &--title {
+      border: 1px solid green;
+      height: 100px;
+    }
+    &--search {
+      border: 1px solid blue;
+      height: 100px;
+    }
+    &--fav {
+      border: 1px solid pink;
+      height: 100px;
+    }
+  }
+}

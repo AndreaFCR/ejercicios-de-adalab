@@ -1,0 +1,14 @@
+// nota: el reset lo puedo importar en la madre de todos (index o app)
+@import "core/reset";
+@import "core/variables";
+
+.app {
+  font-family: $font-default;
+  font-size: 16px;
+  font-weight: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+}

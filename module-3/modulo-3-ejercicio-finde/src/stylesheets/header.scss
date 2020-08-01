@@ -1,0 +1,9 @@
+// nota: las variables las tengo que importar en cada sitio donde las utilice
+@import "core/variables";
+
+.header {
+  border: 1px solid red;
+  &__title {
+    color: $color-primary;
+  }
+}
