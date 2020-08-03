@@ -1,0 +1,19 @@
+.colorOne {
+  color: blue;
+}
+.colorTwo {
+  color: red;
+}
+.container {
+  border: 1px solid red;
+  margin: 10px;
+}
+
+.active {
+  border: 1px solid grey;
+  background-color: grey;
+}
+
+.hidden {
+  display: none;
+}
