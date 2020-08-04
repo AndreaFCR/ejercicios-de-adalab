@@ -1,5 +1,5 @@
-const getDataFromApi = () => {
-  const ENDPOINT = "http://api.tvmaze.com/search/shows?q=girls";
+const getDataFromApi = (nameFilter) => {
+  const ENDPOINT = `http://api.tvmaze.com/search/shows?q=${nameFilter}`;
   return fetch(ENDPOINT)
     .then((response) => response.json())
     .then((data) => {
