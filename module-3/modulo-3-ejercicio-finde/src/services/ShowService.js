@@ -3,6 +3,12 @@ const getDataFromApi = (nameFilter) => {
   return fetch(ENDPOINT)
     .then((response) => response.json())
     .then((data) => {
+      // console.log(
+      //   "datos del api, es un array",
+      //   data,
+      //   "--> lo que queremos guardar, recorrer!",
+      //   data[0].show
+      // );
       return data.map((show) => {
         return {
           id: show.show.id,
