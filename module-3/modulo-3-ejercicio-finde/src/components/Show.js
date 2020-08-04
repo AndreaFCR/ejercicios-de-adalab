@@ -1,17 +1,21 @@
 import React from "react";
 import "../stylesheets/show.scss";
 
-class Show extends React.Component {
-  render() {
-    return (
-      <article className="show">
-        <div>foto</div>
-        <div>título</div>
-        <div>puntuacion</div>
-        <div>estado</div>
-      </article>
-    );
-  }
-}
+const Show = (props) => {
+  return (
+    <article className="show">
+      <img
+        className="show__image"
+        src={props.image}
+        alt="Imagen de la serie"
+      ></img>
+      <div className="show__name">{props.name}</div>
+      <div className="show__data">
+        <div className="show__data__score">{props.score}</div>
+        <div className="show__data__status">{props.status}</div>
+      </div>
+    </article>
+  );
+};
 
 export default Show;

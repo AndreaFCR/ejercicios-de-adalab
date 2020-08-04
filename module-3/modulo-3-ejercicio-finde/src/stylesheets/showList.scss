@@ -1,5 +1,7 @@
 @import "core/variables";
 .container {
-  border: 1px solid green;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
   padding: 10px;
 }

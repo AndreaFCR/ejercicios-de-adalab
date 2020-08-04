@@ -1,7 +1,29 @@
 @import "core/variables";
 
 .show {
-  border: 1px solid red;
-  width: 200px;
+  border: 2px solid $color-primary-dark;
+  border-radius: 10px;
+  width: 210px;
   margin: 5px;
+  padding: 5px;
+
+  &__name {
+    background-color: $color-primary-dark;
+    color: $color-primary-light;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  &__image {
+    border-radius: 10px;
+  }
+
+  &__data {
+    color: $color-primary-medium;
+
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
 }

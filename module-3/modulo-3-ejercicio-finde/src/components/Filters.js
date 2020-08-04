@@ -11,6 +11,7 @@ const Filters = (props) => {
         id="name"
         type="text"
         onChange={props.handleChangeInput}
+        value={props.nameFilter}
       />
       <label htmlFor="check"> Está en emisión: </label>
       <input
@@ -18,7 +19,6 @@ const Filters = (props) => {
         id="check"
         type="checkbox"
         onChange={props.handleCheck}
-        value={props.nameFilter}
       />
     </form>
   );

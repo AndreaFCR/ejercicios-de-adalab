@@ -8,7 +8,7 @@ const getDataFromApi = (nameFilter) => {
           id: show.show.id,
           image: show.show.image,
           name: show.show.name,
-          score: show.show.rating.avarage,
+          score: show.show.rating.average,
           status: show.show.status,
         };
       });

@@ -6,24 +6,24 @@ import ShowList from "./ShowList";
 import "../stylesheets/app.scss";
 
 const App = () => {
+  // establecemos los valores por defecto de los datos mediante hooks
   const [showStore, setShowStore] = useState([]);
   const [nameFilter, setNameFilter] = useState("girls");
   const [statusFilter, setStatusFilter] = useState(false);
 
   useEffect(() => {
-    getDataFromApi().then((data) => {
+    // poner en la funcion nameFilter porque así busca con lo que pongamos en value, si no sólo devuelve un valor. necesitamos un array de datos, no nos vale un solo valor
+    getDataFromApi(nameFilter).then((data) => {
       setShowStore(data);
     });
   }, [nameFilter]);
 
   // handlers de los filters
   const handleChangeInput = (ev) => {
-    console.log("aquí se hacen las comprobaciones del input", ev.target.id);
     setNameFilter(ev.target.value);
   };
 
   const handleCheck = (ev) => {
-    console.log("aquí se hacen las comprobaciones del check", ev.target.id);
     setStatusFilter(ev.target.checked);
   };
 
